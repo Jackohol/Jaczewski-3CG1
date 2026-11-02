@@ -1,61 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"> 
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> KICK-BOXING</title>
 </head>
 <style>
     body{
-       background: black;
-       color: white;
-       font-family: Arial;
-       text-align: center;
+    
+        background-image : url("https://img.magnific.com/premium-wektory/wektor-logo-kickboxingu-i-mieszanych-sztuk-walki_7888-1488.jpg?semt=ais_hybrid&w=740&q=80");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; 
+        color: white;
+        font-family: Arial;
+        text-align: center;
     }
     header{
         background: black;
         padding: 25px;
         color: red;
+        
     }
     section{
         padding: 20px;
         margin: 15px;
         background: #333;
+        text-align: left
     }
-    h2{
+    h2{ 
         color: red;
     }
     footer{
-        background: black;
+        background: rgb(201, 77, 77);
         padding: 15px;
         
     }
-    </style>
+    #nav{
+        background-color: rgba(170, 120, 120, 0.9); color: white;
+        padding: 15px;
+        text-align: center;
+        position: fixed;
+        height: 155px;
+        width: 120px;
+        border: 5px solid rgba(160, 145, 14, 0.9);
+    }
+
+    #naglowek{
+        text-align: center;
+        color: red;
+        
+    };
+    
+   
+#Kontakt {
+    background: black;
+    color: white;
+    padding: 70px 10%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.kontakt-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.kontakt-container h2 {
+    color: white ;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.kontakt-podkreslenie {
+    width: 45px;
+    height: 4px;
+    background: linear-gradient(to right, red 50%, blue 50%);
+    margin: 15px auto 40px;
+}
+
+.kontakt-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.kontakt-info {
+    width: 40%;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.kontakt-info h3 {
+    color: white;
+    font-size: 17px;
+}
+
+.kontakt-info p {
+    color: #ebeaea;
+}
+
+.kontakt-info a {
+    color: red;
+    text-decoration: none;
+}
+
+.kontakt-form {
+    width: 55%;
+}
+
+.kontakt-form input,
+.kontakt-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    font-family: Arial;
+    font-size: 13px;
+}
+
+.kontakt-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.kontakt-form button {
+    background: rgb(121, 14, 28);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.kontakt-form button:hover {
+    background: #d71920;
+}
+
+@media(max-width: 700px) {
+    .kontakt-content {
+        flex-direction: column;
+    }
+
+    .kontakt-info,
+    .kontakt-form {
+        width: 100%;
+    }
+}
+
+    </style> 
 </head>
 
 <body>
 
-    <header>
+    <header id ="nav">
         <nav>
-            <ul>
-                <li><a href="#Okickboxingu">O kickboxingu</a></li>
-                <li><a href="#Historia">Historia</a></li>
-                <li><a href="#Zasady">Zasady</a></li>
-                <li><a href="#Sprzet">Sprzet</a></li>
-                <li><a href="#Garelia">Garelia</a></li>
-            </ul>
+            
+                <a href="#Okickboxingu">O kickboxingu</a><br>
+                <a href="#Historia">Historia</a><br>
+                <a href="#Zasady">Zasady</a><br>
+                <a href="#Sprzet">Sprzet</a><br>
+                <a href="#Techniki">Techniki</a><br>
+                <a href="#Galeria">Galeria</a><br>
+                <a href="#Znani zawodnicy">Znani zawodnicy</a><br>
+                <a href="#Kontakt">Kontakt</a><br>
+               
         </nav>
     </header>
 
-    <header>
+ <section id="naglowek">
 
-        <h1>KICK BOXING</h1>
+    <h1><strong>KICK BOXING</strong></h1> 
+    <img src="https://azs.pl/Uploads/Media/2026/kickboxing1.svg" height="100" width="140">
 
-        <p>Siła,pasja i charakter!</p>
+    <p><u><i>Siła, pasja i charakter!</i></u></p> 
+    </section>
 
-    </header>
 
-    <section class="O kickboxingu">
+
+    <section id="Okickboxingu">
 
         <h2>O Kickboxingu </h2>
 
@@ -63,34 +189,167 @@
 
     </section>
 
-    <section class="Historia">
+    <section id="Historia">
 
         <h2>Historia</h2>
 
         <p>Kickboxing powstał w Japonii w latach 50. XX wieku, jako połączenie boksu i karate. W latach 70. XX wieku kickboxing zyskał popularność w Stanach Zjednoczonych, a następnie na całym świecie. Obecnie jest to dyscyplina sportowa, która cieszy się dużym zainteresowaniem zarówno wśród zawodników, jak i kibiców.</p>
     </section>
 
-    <section class="Zasady">
+    <section id="Zasady">
 
         <h2>Zasady</h2>
 
         <p>W kickboxingu obowiązują zasady podobne do boksu, jednak dopuszczalne są również kopnięcia. Zawodnicy walczą w określonych kategoriach wagowych, a walki odbywają się na ringu. Celem jest zdobycie punktów poprzez trafienie przeciwnika ciosami i kopnięciami, a także unikanie trafień ze strony rywala.</p>
     </section>
 
-    <section class="Sprzet">
+    <section id="Sprzet">
 
         <h2>Sprzęt</h2>
 
         <p>Do uprawiania kickboxingu potrzebny jest odpowiedni sprzęt, w tym rękawice bokserskie, ochraniacze na zęby, ochraniacze na piszczele, kask ochronny oraz odpowiednie obuwie sportowe. W zależności od rodzaju treningu i poziomu zaawansowania, zawodnicy mogą również korzystać z worków treningowych, tarcz i innych akcesoriów.</p>
     </section>
+    <section id="Techniki">
+          <h2>Techniki</h2>
+          <p>
+Pozycja i poruszanie się (Footwork)
+<br>
+Fundamentem walki jest stabilna pozycja, która pozwala na błyskawiczny atak i skuteczną obronę.
+• Pozycja walki (Stance): Ustawienie boczno-frontalny. Dla osób praworęcznych lewa noga i lewa ręka są z przodu (pozycja klasyczna). Łokcie chronią tułów, a dłonie (gardz) znajdują się na wysokości szczęki.
+• Krok dostawny: Podstawowy sposób poruszania się – najpierw porusza się noga bliższa kierunkowi ruchu (w przód lewa, w tył prawa).
+<br>
+🥊 Ciosy bokserskie (Punches)
+<br>
+Wyprowadzane z rotacją bioder i pracą stóp dla zwiększenia siły.
+• Cios prosty (Straight punch / Jab & Cross):
+• Jab – szybki cios z przedniej ręki, służy do mierzenia dystansu i rozbijania gardy.
+• Cross – silny cios z tylnej ręki, wyprowadzany z pełnym skrętem tułowia.
+• Cios sierpowy (Hook): Uderzenie z boku, z łokciem zgiętym pod kątem około 90 stopni. Celowany w szczękę, skroń lub wątrobę.
+• Cios podbródkowy (Upper-cut): Uderzenie wyprowadzane z dołu do góry, mające na celu przebicie się między rękawicami przeciwnika bezpośrednio pod brodę.
+• Backfist: Uderzenie zewnętrzną stroną pięści po obrocie o 360 stopni (efektowne i dynamiczne).
+<br>
+🦶 Kopnięcia (Kicks)
+<br>
+To one definiują kickboxing i generują największą siłę uderzenia.
+• Kopnięcie frontalne (Front kick / Push kick): Uderzenie podeszwą lub poduszką stopy w tułów lub twarz. Służy do odpychania i zatrzymywania szarżującego rywala.
+• Kopnięcie okrężne (Roundhouse kick): Najpopularniejsze kopnięcie, uderzane kością piszczelową lub podbiciem stopy. Dzieli się na trzy strefy:	• Low kick – w udo przeciwnika (wewnętrzne lub zewnętrzne).
+• Middle kick – w żebra, tułów lub ramię.
+• High kick – w głowę lub szyję.
+• Kopnięcie boczne (Side kick): Wyprowadzane poprzez uniesienie kolana i wyprostowanie nogi w bok, uderzając piętą lub kantem stopy.
+• Kopnięcie z obrotu (Spinning hook kick / Back kick): Kopnięcia po obrocie przez plecy – bardzo silne, potrafiące zakończyć walkę przed czasem.
+• Kopnięcie opadające (Axe kick): Uniesienie nogi wysoko w górę i opuszczenie jej z siłą piętą w dół na głowę lub obojczyk rywala.
+<br>
+🛡️ Techniki obronne (Defense)
+<br>
+Skuteczna obrona pozwala na natychmiastowe wyprowadzenie kontrataku.
+• Garda (Block): Zasłonięcie głowy lub tułowia przedramionami i rękawicami.
+• Uniki (Slips & Ducks): Schodzenie z linii ciosu poprzez rotację tułowia (unik rotacyjny) lub lekkie obniżenie pozycji (unik w dół).
+• Parowanie (Parrying): Zbijanie ciosów przeciwnika dłonią w bok lub w dół.
+• Uniesienie nogi (Check): Obrona przed kopnięciami typu low kick poprzez uniesienie kolana pod kątem i przyjęcie uderzenia na twardą, górną część piszczeli.
+<br>
+🦵 Kolana (Knees) – głównie w formule K-1
+<br>
+• Kolano proste (Straight knee): Dynamiczne uderzenie kolanem w przód, najczęściej w brzuch lub splot słoneczny.
+• Kolano z wyskoku (Flying knee): Spektakularne uderzenie z rozbiegu lub wyskoku, celowane w głowę przeciwnika.</p>
 
-    <section class="Garelia">
-        <h2>Garelia</h2>
-
-        <img src="https://cdn.pixabay.com/photo/2017/08/30/01/05/kickboxing-2699630_960_720.jpg" alt="Kickboxing" width="500" height="300">
     </section>
-
     
     
-
+    <section id="Galeria">
+        <h2>Galeria</h2>
+        
+        
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Picbuakaw.jpg?utm_source=pl.wikipedia.org&utm_campaign=index&utm_content=original" height="500" width="400">
+        <img src="https://www.riminiwellness.com/Data/Riminiwellness/Eventi%20IEG/eventi_espositori/Giorgio%20Petrosyan%20-%20Performance%20%20Arena%20%20Pad%20A1%20-%20domenica%2031%20pomeriggio/694285/image-thumb__694285__ws_card_event/petrosyan.jpg"   height="500" width="400" >
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4cyC-Ssyz29XbLak5kyKYeEyptvLYY-vzGKkzs06qkP-54uuQ6ciEy0Bh&s=10" height="500" width="400" >
+        <img src="https://images.tapology.com/letterbox_images/2775/default/Peter-Aerts.jpg?1336745065" height="500" width="400" >
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQlmbWzsou-2DB7II2dwKj3VhIrII9QuyKZkx42JuNCCB3LjgMWWxX4Mg&s=10"height ="500" width="400" > 
+    </section>
+    
+    <section id="Znani zawodnicy">
+        <h2>Znani zawodnicy</h2>
+        <p>Tutaj znajdziesz najbardziej znanych zawodnikach kickboxingu.
+            takich jak: Giorgio Petrosyan, Buakaw Banchamek, Rico Verhoeven, Semmy Schilt, Andy Souwer, Nieky Holzken, Gokhan Saki, Alistair Overeem, Mirko Cro Cop. Każdy z nich ma swoje unikalne osiągnięcia i styl walki, które przyczyniły się do rozwoju tej dyscypliny sportowej.
+        </p>
+    </section>
+    
+    <section id="Kontakt">
+    
+    
+    <div class="kontakt-container">
+    
+        <h2>KONTAKT</h2>
+    
+        <div class="kontakt-podkreslenie"></div>
+    
+        <div class="kontakt-content">
+    
+            <div class="kontakt-info">
+    
+                <h3>Sekcja Kickboxingu</h3>
+    
+                <p>
+                    Kickboxing<br>
+                    ul. Sportowa 24<br>
+                    Warszawa
+                </p>
+    
+                <p>
+                    W dniach poniedziałek, środa i piątek 16:30-20:30.
+                </p>
+    
+                <p>
+                    <b>Tel:</b> 791 123 456<br>
+                    <b>Mail:</b>
+                    <a href="mailto:kickboxing@gmail.com">
+                        kickboxing@gmail.com
+                    </a>
+                </p>
+    
+            </div>
+    
+            <div class="kontakt-form">
+    
+                <form action="#" method="post">
+    
+                    <input 
+                        type="text" 
+                        name="imie" 
+                        placeholder="Imię i nazwisko" 
+                        required
+                    >
+    
+                    <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="Email" 
+                        required
+                    >
+    
+                    <input 
+                        type="text" 
+                        name="temat" 
+                        placeholder="Temat wiadomości" 
+                        required
+                    >
+    
+                    <textarea 
+                        name="wiadomosc" 
+                        placeholder="Treść wiadomości..." 
+                        required
+                    ></textarea>
+    
+                    <button type="submit">WYŚLIJ</button>
+    
+                </form>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+    
+    
+    </section>
+</body>
 </html>
