@@ -1,355 +1,691 @@
 <!DOCTYPE html>
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> KICK-BOXING</title>
-</head>
+<html lang="pl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kick Boxing</title>
+
 <style>
-    body{
+
+    html{
+        scroll-behavior: smooth;
+    }
+    .kontakt-dane{
+        max-width: 350px;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+    }
+    .kontakt-dane h2{
+    color: red;
+    font-size: 25px;
+    margin: 0 0 5px 0;
+    letter-spacing: 1px;
+    }
+    .pasek{
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(to right darkblue 33%, orange 33% 66%, white 66%);
+        margin-bottom: 25px;
+    }
+    .kontakt-dane h3{
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #fff;
+    }
+    .kontakt-dane p{
+        font-size: 15px;
+        line-height: 2;
+        color: #ccc;
+        margin-bottom: 15px;
+        
+    }
     
-        background-image : url("https://img.magnific.com/premium-wektory/wektor-logo-kickboxingu-i-mieszanych-sztuk-walki_7888-1488.jpg?semt=ais_hybrid&w=740&q=80");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed; 
-        color: white;
-        font-family: Arial;
-        text-align: center;
+    body{ 
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background:#111;
+        color: #fff;
     }
     header{
-        background: black;
-        padding: 25px;
-        color: red;
-        
+        background: rgba(0,0,0,0.0);
+        padding:15px 30px;
+        position: sticky;
+        top: 0;
     }
-    section{
-        padding: 20px;
-        margin: 15px;
-        background: #333;
-        text-align: left
+    .logo{
+        font-size: 25px;
+        font-weight: bold;
+        color:#fff;
     }
-    h2{ 
-        color: red;
+    .logo span{
+        color: #ff351c; 
     }
-    footer{
-        background: rgb(201, 77, 77);
-        padding: 15px;
-        
-    }
-    #nav{
-        background-color: rgba(170, 120, 120, 0.9); color: white;
-        padding: 15px;
-        text-align: center;
-        position: fixed;
-        height: 155px;
-        width: 120px;
-        border: 5px solid rgba(160, 145, 14, 0.9);
-    }
-
-    #naglowek{
-        text-align: center;
-        color: red;
-        
-    };
+    .hero{
+        height: 100vh;
     
-   
-#Kontakt {
-    background: black;
-    color: white;
-    padding: 70px 10%;
-    margin: 0;
+    }
+.hero {
+    height: 100vh; 
+    
+    
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://jyoshinmon.ee/wp-content/uploads/2023/05/AboutKickboxingPhoto.jpg');
+    
+    background-size: cover;
+    background-position: center;
+}
+    .pierwszy-trening{
+        background:#111;
+        color:darkorange;
+      padding: 50px 20px;
+      font-family: Arial, Helvetica, sans-serif;  
+    } 
+    .pierwszy-trening h2{
+        color: #fff;
+        margin-bottom: 40px;
+    }
+    .trening-container{
+        display: flex;
+        gap : 40px;
+        max-width: 900px;
+        margin:0 auto;
+        flex-wrap: wrap;
+    }
+    .kroki, .faq{
+        flex: 1;
+        min-width : 280px;
+    }
+    .krok{
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    .numer{
+        color:#ff351c;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .krok h3{
+        margin: 0 0 5px 0;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    .krok p, .faq p{
+color: #aaa;
+font-size: 13px;
+margin: 0;
+    }
+    .faq-item{
+        border-bottom: 1px solid #111;
+        padding: 12px 0;
+    }
+    
+    .faq-item summary {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.faq-item p {
+    margin-top: 8px;
+}
+
+
+
+/* PODSTAWOWE USTAWIENIA */
+body {
+    background-color: #111;
+    color: #fff;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
-.kontakt-container {
-    max-width: 900px;
-    margin: auto;
+a {
+    text-decoration: none;
+    color: #fff;
 }
 
-.kontakt-container h2 {
-    color: white ;
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.kontakt-podkreslenie {
-    width: 45px;
-    height: 4px;
-    background: linear-gradient(to right, red 50%, blue 50%);
-    margin: 15px auto 40px;
-}
-
-.kontakt-content {
+/* MENU */
+header {
+    background: #222;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
-    gap: 50px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.kontakt-info {
-    width: 40%;
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo span {
+    color: #ff351c;
+
+}
+
+nav a {
+    margin-left: 15px;
     font-size: 14px;
-    line-height: 1.8;
 }
 
-.kontakt-info h3 {
-    color: white;
-    font-size: 17px;
+nav a:hover {
+    color: #ff351c;
 }
 
-.kontakt-info p {
-    color: #ebeaea;
+/* SEKCJA GŁÓWNA (HERO) */
+
+
+.hero h1 {
+    font-size: 90px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.kontakt-info a {
-    color: red;
-    text-decoration: none;
+.hero h1 span {
+    color: #ff351c;
+
+    
 }
 
-.kontakt-form {
-    width: 55%;
+.hero p {
+    color: #aaa;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    
 }
 
-.kontakt-form input,
-.kontakt-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 12px;
-    border: 1px solid white;
-    box-sizing: border-box;
-    font-family: Arial;
-    font-size: 13px;
+.hero{
+    text-align: center;
+    align-items: center;
 }
 
-.kontakt-form textarea {
-    height: 100px;
-    resize: vertical;
+.button {
+    display: inline-block;
+    background: #ff351c;
+    color: #fff;
+    padding: 10px 25px;
+    font-weight: bold;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 24px;
+
+    height: 50px;
+    width: 250px;
+    
 }
 
-.kontakt-form button {
-    background: rgb(121, 14, 28);
-    color: white;
+.button:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* SEKCJE OGÓLNE */
+.section {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    color: #ff351c;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* GALERIA */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    
+}
+
+/* KONTAKT */
+.kontakt {
+    background: #222;
+    padding: 60px 20px;
+    text-align: center;
+    height: 350px;
+}
+
+.kontakt form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.kontakt input, 
+.kontakt textarea {
+    padding: 10px;
+    background: #333;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.kontakt button {
+    background: #ff351c;
+    color: #fff;
     border: none;
-    padding: 12px 25px;
+    padding: 12px;
+    font-weight: bold;
     cursor: pointer;
+    border-radius: 4px;
+}
+
+/* STOPKA */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #777;
+    font-size: 12px;
+}
+
+td{
+    padding: 10px;
+    border: 1px solid #444;
+}
+tr{
+    border: 1px solid #444;
+}
+table{
+    border: 1px solid #444
+}
+th{
+    padding: 10px;
+    border: 1px solid #444;
+}
+
+.first, .miesiac, .pesonal{
+    background-color: #222;
+    padding: 20px;
+    margin: 20px auto;
+    border: 2px solid red;
+    border-radius: 5px;
+    text-align: center;
+
+}
+.price{
+    
+    border: 1px solid #ff351c;
+    padding: 10px;
+    margin: 10px auto;
+    width: 180px;
+    
+
+    
+}
+
+.opis{
+    font-size: 24px;
     font-weight: bold;
 }
 
-.kontakt-form button:hover {
-    background: #d71920;
+#last{
+    text-align: center;
+    margin-bottom: 40px;
+}
+ 
+#przycisk{
+    align-items: center;
+    
 }
 
-@media(max-width: 700px) {
-    .kontakt-content {
-        flex-direction: column;
-    }
 
-    .kontakt-info,
-    .kontakt-form {
-        width: 100%;
-    }
+.facts{
+    background-color: #222;
+    padding: 20px;
+    margin: 20px auto;
+    border: 2px solid red;
+    border-radius: 5px;
+    text-align: center;
 }
 
-    </style> 
+.info{
+    float: left;
+    text-align: left;
+}
+
+
+</style>
 </head>
 
 <body>
+<section id="home"></section>
+<!-- MENU -->
+<header>
+    <div class="logo"><span>KICK</span>BOXING</div>
+    <nav>
+        <a href="#home">🏠 ㅤㅤㅤ</a>
+        <a href="#grafik"><span style="color: red; font-size: 20px;"><strong>Dołacz do nas!</strong></span></a>
+        <a href="#o-nas">O nas</a>
+        <a href="#zasady">Zasady</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#trenerzy">Nasza kadra</a>
+        <a href="#kontakt">Kontakt</a> 
+    </nav>
+</header>
 
-    <header id ="nav">
-        <nav>
-            
-                <a href="#Okickboxingu">O kickboxingu</a><br>
-                <a href="#Historia">Historia</a><br>
-                <a href="#Zasady">Zasady</a><br>
-                <a href="#Sprzet">Sprzet</a><br>
-                <a href="#Techniki">Techniki</a><br>
-                <a href="#Galeria">Galeria</a><br>
-                <a href="#Znani zawodnicy">Znani zawodnicy</a><br>
-                <a href="#Kontakt">Kontakt</a><br>
-               
-        </nav>
-    </header>
+<!-- SEKCJA GŁÓWNA -->
+<section class="hero" >
+    <h1>ODKRYJ SWOJĄ SIŁĘ I <span>CHARAKTER</span></h1>
+    <p>Kickboxing to doskonały sport, który poprawi Twoją kondycję, pewność siebie i nauczy Cię samoobrony.</p>
+    <br>
+    <a href="#kontakt" class="button" id="przycisk">Zapisz się na trening</a>
+</section>
 
- <section id="naglowek">
+<!-- O NAS -->
+<section class="section" id="o-nas">
+    <h2>O kickboxingu</h2>
+    <p>Kickboxing to dyscyplina sportowa łącząca ciosy bokserskie oraz kopnięcia. Treningi rozwijają całe ciało, poprawiają refleks, kondycję oraz siłę fizyczną. Jest to sport dla każdego, niezależnie od poziomu zaawansowania.</p>
+Z czasem kickboxing podzielił się na różne formuły sportowe, takie jak:
+• Pointfighting (dawniej semi-contact),<br>
+• Light contact i kick light,<br>
+• Full-contact,<br>
+• Low-kick oraz K-1.<br>
+</section>
 
-    <h1><strong>KICK BOXING</strong></h1> 
-    <img src="https://azs.pl/Uploads/Media/2026/kickboxing1.svg" height="100" width="140">
+<!-- ZASADY -->
+<section class="section" id="zasady">
+    <h2>Zasady i sprzęt</h2>
+    <p><strong>Zasady:</strong> Walki odbywają się w kategoriach wagowych. Punktowane są poprawne ciosy i kopnięcia zadane w wyznaczone strefy przeciwnika.</p>
+    <p><strong>Punktacja:</strong>
 
-    <p><u><i>Siła, pasja i charakter!</i></u></p> 
-    </section>
 
-
-
-    <section id="Okickboxingu">
-
-        <h2>O Kickboxingu </h2>
-
-        <p>kick boxing – dyscyplina sportowa, w której walczy się stosując zarówno bokserskie ciosy pięścią, jak i kopnięcia. Sport rozwijający w sposób holistyczny umiejętności fizyczne takie jak: siła, szybkość, wytrzymałość, gibkość, poczucie rytmu.</p>
-
-    </section>
-
-    <section id="Historia">
-
-        <h2>Historia</h2>
-
-        <p>Kickboxing powstał w Japonii w latach 50. XX wieku, jako połączenie boksu i karate. W latach 70. XX wieku kickboxing zyskał popularność w Stanach Zjednoczonych, a następnie na całym świecie. Obecnie jest to dyscyplina sportowa, która cieszy się dużym zainteresowaniem zarówno wśród zawodników, jak i kibiców.</p>
-    </section>
-
-    <section id="Zasady">
-
-        <h2>Zasady</h2>
-
-        <p>W kickboxingu obowiązują zasady podobne do boksu, jednak dopuszczalne są również kopnięcia. Zawodnicy walczą w określonych kategoriach wagowych, a walki odbywają się na ringu. Celem jest zdobycie punktów poprzez trafienie przeciwnika ciosami i kopnięciami, a także unikanie trafień ze strony rywala.</p>
-    </section>
-
-    <section id="Sprzet">
-
-        <h2>Sprzęt</h2>
-
-        <p>Do uprawiania kickboxingu potrzebny jest odpowiedni sprzęt, w tym rękawice bokserskie, ochraniacze na zęby, ochraniacze na piszczele, kask ochronny oraz odpowiednie obuwie sportowe. W zależności od rodzaju treningu i poziomu zaawansowania, zawodnicy mogą również korzystać z worków treningowych, tarcz i innych akcesoriów.</p>
-    </section>
-    <section id="Techniki">
-          <h2>Techniki</h2>
-          <p>
-Pozycja i poruszanie się (Footwork)
-<br>
-Fundamentem walki jest stabilna pozycja, która pozwala na błyskawiczny atak i skuteczną obronę.
-• Pozycja walki (Stance): Ustawienie boczno-frontalny. Dla osób praworęcznych lewa noga i lewa ręka są z przodu (pozycja klasyczna). Łokcie chronią tułów, a dłonie (gardz) znajdują się na wysokości szczęki.
-• Krok dostawny: Podstawowy sposób poruszania się – najpierw porusza się noga bliższa kierunkowi ruchu (w przód lewa, w tył prawa).
-<br>
-🥊 Ciosy bokserskie (Punches)
-<br>
-Wyprowadzane z rotacją bioder i pracą stóp dla zwiększenia siły.
-• Cios prosty (Straight punch / Jab & Cross):
-• Jab – szybki cios z przedniej ręki, służy do mierzenia dystansu i rozbijania gardy.
-• Cross – silny cios z tylnej ręki, wyprowadzany z pełnym skrętem tułowia.
-• Cios sierpowy (Hook): Uderzenie z boku, z łokciem zgiętym pod kątem około 90 stopni. Celowany w szczękę, skroń lub wątrobę.
-• Cios podbródkowy (Upper-cut): Uderzenie wyprowadzane z dołu do góry, mające na celu przebicie się między rękawicami przeciwnika bezpośrednio pod brodę.
-• Backfist: Uderzenie zewnętrzną stroną pięści po obrocie o 360 stopni (efektowne i dynamiczne).
-<br>
-🦶 Kopnięcia (Kicks)
-<br>
-To one definiują kickboxing i generują największą siłę uderzenia.
-• Kopnięcie frontalne (Front kick / Push kick): Uderzenie podeszwą lub poduszką stopy w tułów lub twarz. Służy do odpychania i zatrzymywania szarżującego rywala.
-• Kopnięcie okrężne (Roundhouse kick): Najpopularniejsze kopnięcie, uderzane kością piszczelową lub podbiciem stopy. Dzieli się na trzy strefy:	• Low kick – w udo przeciwnika (wewnętrzne lub zewnętrzne).
-• Middle kick – w żebra, tułów lub ramię.
-• High kick – w głowę lub szyję.
-• Kopnięcie boczne (Side kick): Wyprowadzane poprzez uniesienie kolana i wyprostowanie nogi w bok, uderzając piętą lub kantem stopy.
-• Kopnięcie z obrotu (Spinning hook kick / Back kick): Kopnięcia po obrocie przez plecy – bardzo silne, potrafiące zakończyć walkę przed czasem.
-• Kopnięcie opadające (Axe kick): Uniesienie nogi wysoko w górę i opuszczenie jej z siłą piętą w dół na głowę lub obojczyk rywala.
-<br>
-🛡️ Techniki obronne (Defense)
-<br>
-Skuteczna obrona pozwala na natychmiastowe wyprowadzenie kontrataku.
-• Garda (Block): Zasłonięcie głowy lub tułowia przedramionami i rękawicami.
-• Uniki (Slips & Ducks): Schodzenie z linii ciosu poprzez rotację tułowia (unik rotacyjny) lub lekkie obniżenie pozycji (unik w dół).
-• Parowanie (Parrying): Zbijanie ciosów przeciwnika dłonią w bok lub w dół.
-• Uniesienie nogi (Check): Obrona przed kopnięciami typu low kick poprzez uniesienie kolana pod kątem i przyjęcie uderzenia na twardą, górną część piszczeli.
-<br>
-🦵 Kolana (Knees) – głównie w formule K-1
-<br>
-• Kolano proste (Straight knee): Dynamiczne uderzenie kolanem w przód, najczęściej w brzuch lub splot słoneczny.
-• Kolano z wyskoku (Flying knee): Spektakularne uderzenie z rozbiegu lub wyskoku, celowane w głowę przeciwnika.</p>
-
-    </section>
-    
-    
-    <section id="Galeria">
-        <h2>Galeria</h2>
-        
-        
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Picbuakaw.jpg?utm_source=pl.wikipedia.org&utm_campaign=index&utm_content=original" height="500" width="400">
-        <img src="https://www.riminiwellness.com/Data/Riminiwellness/Eventi%20IEG/eventi_espositori/Giorgio%20Petrosyan%20-%20Performance%20%20Arena%20%20Pad%20A1%20-%20domenica%2031%20pomeriggio/694285/image-thumb__694285__ws_card_event/petrosyan.jpg"   height="500" width="400" >
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4cyC-Ssyz29XbLak5kyKYeEyptvLYY-vzGKkzs06qkP-54uuQ6ciEy0Bh&s=10" height="500" width="400" >
-        <img src="https://images.tapology.com/letterbox_images/2775/default/Peter-Aerts.jpg?1336745065" height="500" width="400" >
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQlmbWzsou-2DB7II2dwKj3VhIrII9QuyKZkx42JuNCCB3LjgMWWxX4Mg&s=10"height ="500" width="400" > 
-    </section>
-    
-    <section id="Znani zawodnicy">
-        <h2>Znani zawodnicy</h2>
-        <p>Tutaj znajdziesz najbardziej znanych zawodnikach kickboxingu.
-            takich jak: Giorgio Petrosyan, Buakaw Banchamek, Rico Verhoeven, Semmy Schilt, Andy Souwer, Nieky Holzken, Gokhan Saki, Alistair Overeem, Mirko Cro Cop. Każdy z nich ma swoje unikalne osiągnięcia i styl walki, które przyczyniły się do rozwoju tej dyscypliny sportowej.
+     W formułach planszowych (np. Pointfighting według przepisów Polskiego Związku Kickboxingu):<br>
+	• 1 punkt: Cios pięścią lub kopnięcie w korpus/nogi.<br>
+	• 2 punkty: Kopnięcie w głowę.<br>
+	• 3 punkty: Kopnięcie z wysoku (z wyskokiem) w głowę.<br>
+	• W Pointfighting walkę może zakończyć m.in. przewaga 10 punktów.<br>
+• W formułach ringowych (Full Contact, Low Kick, K-1):<br>
+	• Sędziowie punktują rundy w systemie 10-punktowym (zwycięzca rundy otrzymuje 10 pkt, przegrany 9 lub mniej, jeśli był liczony).<br>
+	• Punkty przyznaje się za czyste, celne i odpowiednio silne trafienia pięścią lub nogą (oraz kolanem w K-1).<br>
+	• Liczenie zawodnika (knock-down) pomniejsza jego dorobek punktowy lub daje przewagę rywalowi; nokaut (KO) lub techniczny nokaut (TKO) kończy walkę przed czasem.</p><br>
+    <p><strong>Sprzęt:</strong> Do treningu potrzebujesz:<br>
+         •rękawic bokserskich,<br>
+         •ochraniaczy (szczęka, piszczele,kask)<br> 
+         •wygodnego stroju sportowego.<br>
+         •owijki (usztywniają nadgarstki)<br>
+         •ochraniacz suspensor<br>
         </p>
-    </section>
+</section>
+<!--Tehniki-->
+<section class="section" id="Techniki i Ciekawostki">
+    <h2>Podstawowe Techniki</h2>
+    <div class="facts">
+    <h2>🥊 Ciosy i kombinacje</h2>
+<p><strong>🦾 Overhand</strong>  potężny cios z tylnej ręki bitą po łuku z góry nad obroną rywala.</p>
+<p><strong>💥 Superman punch</strong>  cios pięścią z wyskoku po zamorowaniu kopnięcia.</p>
+<p><strong>🔄 Spinning backfist</strong>  dynamiczne uderzenie grzbietem pięści z obrotu.</p>
+<p><strong>⚡ Jab-Cross-Hook</strong>  klasyczna, szybka kombinacja trzech ciosów bokserskich.</p>
+</div>
+<div class="facts">
+<h2>🦵 Kopnięcia i obrona</h2>
+<p><strong>🛡️ Teep (Push kick)</strong>  opnięcie odpychające piętą lub śródstopiem, do kontrolowania dystansu.</p>
+<p><strong>🌀 Spinning hook kick</strong>  widowiskowe kopnięcie hakowe z obrotu o 360 stopni.</p>
+<p><strong>🪓 Axe kick</strong>  kopnięcie opadające (piętą z góry na dół), przechodzące nad gardą.</p>
+<p><strong>❓ Question mark kick</strong>  mylące kopnięcie, które zaczyna się jak Low Kick, a kończy na głowie.</p>
+</div>
+<div class="facts">
+<h2>🛡️ Obrona i praca nóg</h2>
+<p><strong>🛑 Clinch</strong>  chwyt w półdystansie służący do kontrolowania przeciwnika i zadawania kolan.</p>
+<p><strong>🔄 Pivot</strong>  rotacja na przedniej nodze zmieniająca kąt natarcia i pozycję w walce.</p>
+<p><strong>📐 Slip & Counter</strong>  unik głową w bok połączony z natychmiastową odpowiedzią ciosem.</p>
+</div>
+</section>
+<!-- GALERIA -->
+<section class="section" id="galeria">
+    <div id="galery">
     
-    <section id="Kontakt">
-    
-    
-    <div class="kontakt-container">
-    
-        <h2>KONTAKT</h2>
-    
-        <div class="kontakt-podkreslenie"></div>
-    
-        <div class="kontakt-content">
-    
-            <div class="kontakt-info">
-    
-                <h3>Sekcja Kickboxingu</h3>
-    
-                <p>
-                    Kickboxing<br>
-                    ul. Sportowa 24<br>
-                    Warszawa
-                </p>
-    
-                <p>
-                    W dniach poniedziałek, środa i piątek 16:30-20:30.
-                </p>
-    
-                <p>
-                    <b>Tel:</b> 791 123 456<br>
-                    <b>Mail:</b>
-                    <a href="mailto:kickboxing@gmail.com">
-                        kickboxing@gmail.com
-                    </a>
-                </p>
-    
-            </div>
-    
-            <div class="kontakt-form">
-    
-                <form action="#" method="post">
-    
-                    <input 
-                        type="text" 
-                        name="imie" 
-                        placeholder="Imię i nazwisko" 
-                        required
-                    >
-    
-                    <input 
-                        type="email" 
-                        name="email" 
-                        placeholder="Email" 
-                        required
-                    >
-    
-                    <input 
-                        type="text" 
-                        name="temat" 
-                        placeholder="Temat wiadomości" 
-                        required
-                    >
-    
-                    <textarea 
-                        name="wiadomosc" 
-                        placeholder="Treść wiadomości..." 
-                        required
-                    ></textarea>
-    
-                    <button type="submit">WYŚLIJ</button>
-    
-                </form>
-    
-            </div>
-    
+    <h2>Galeria</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=500&q=80" alt="Trening" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1517438322307-e67111335449?auto=format&fit=crop&w=500&q=80" alt="Rękawice" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?auto=format&fit=crop&w=500&q=80" alt="Sama sala" loading="lazy">
+    </div>
+
+    </div>
+</section>
+
+    <!-- TRENERZY -->
+<section class="section" id="trenerzy">
+    <h2>Kadra - Nasi Trenerzy</h2>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+        <div style="background: #222; padding: 20px; border-radius: 5px; width: 250px; text-align: center;">
+            <img src="trener.png" alt="Trener" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px;">
+            <h3>Jan Kowalski</h3>
+            <p style="color: orangered;">Trener</p>
+            <p style="font-size: 13px; color: #aaa;">10 lat doświadczenia w sportach walki, wielokrotny medalista.</p>
+        </div>
+
+            <div style="background: #222; padding: 20px; border-radius: 5px; width: 250px; text-align: center;">
+            <img src="trener2.jpeg" alt="Trener" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px;">
+            <h3>lukasz bryk-patapim</h3>
+            <p style="color: orangered;"> Trener</p>
+            <p style="font-size: 13px; color: #aaa;">8 lat doświadczenia w sportach walki, Trzykrotny medalista.</p>
         </div>
     
+            <div style="background: #222; padding: 20px; border-radius: 5px; width: 250px; text-align: center;">
+            <img src="trener4.webp" alt="Trener" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px;">
+            <h3>Dorota Huda</h3>
+            <p style="color: orangered;">Trener </p>
+            <p style="font-size: 13px; color: #aaa;">6 lat doswiadczenia w kickboxingu i 2 lata w boxie. jednokrotna medalistka</p>
+        </div>
+
+           
+        
+        <div style="background: #222; padding: 20px; border-radius: 5px; width: 250px; text-align: center;">
+            <img src="trener5.jpeg" alt="Trener" style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px;">
+            <h3>Mariusz Kulesza</h3>
+            <p style="color: #ff351c;">Trener </p>
+            <p style="font-size: 13px; color: #aaa;">7 lat doswiadczenia w sztukach walki. jednokrotny medalista</p>
+        </div>
+    
+    
+    
     </div>
+
+
+
+</section>
+
+
+<section class="pierwszy-trening">
+     <div id="last"><h2>TWÓJ PIERWSZY TRENING. PROŚCIEJ, NIŻ MYŚLISZ.</h2></div>
+
+    <div class="trening-container">
+        <!-- Lewa strona: Kroki -->
+        <div class="kroki">
+            <div class="krok">
+                <span class="numer">01</span>
+                <div>
+                    <h3>Wybierz swoją grupę</h3>
+                    <p>Zobacz grafik i wybierz grupę pasującą do Twojego doświadczenia.</p>
+                </div>
+            </div>
+
+            <div class="krok">
+                <span class="numer">02</span>
+                <div>
+                    <h3>Potwierdź swoją wizytę</h3>
+                    <p>Skontaktuj się z klubem, upewnij o dostępności miejsc i zapisz się.</p>
+                </div>
+            </div>
+
+            <div class="krok">
+                <span class="numer">03</span>
+                <div>
+                    <h3>Przyjdź 15 minut wcześniej</h3>
+                    <p>Zabierz wygodny strój i wodę. Poznaj trenera i resztę grupy.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Prawa strona: Pytania i odpowiedzi (FAQ) -->
+        <div class="faq">
+            <details class="faq-item" open>
+                <summary>Czy muszę mieć doświadczenie?</summary>
+                <p>Nie – mamy grupy całkowicie od podstaw, gdzie uczymy wszystkiego krok po kroku.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Czy kobiety i mężczyźni trenują razem?</summary>
+                <p>Tak, większość grup jest mieszana.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Jak wygląda trening próbny?</summary>
+                <p>To rozgrzewka, nauka podstawowych ciosów i lekkie ćwiczenia na tarczach.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Czy muszę kupić rękawice?</summary>
+                <p>Na pierwszy trening sprzęt możesz wypożyczyć na miejscu.</p>
+            </details>
+        </div>
+    </div>
+</section>
+<section class="section" id="grafik">
+    <h2>Grafik i Cennik</h2>
+    <table>
+        <tr>
+            <th>Dzień</th>
+            <th>Godzina</th>
+            <th>Grupa</th>
+            <th>Kategoria</th>
+            <th>Czas</th>
+        
+        </tr>
+        
+        <tr>
+            <td>Poniedziałek</td>
+            <td class="hour">18:00 - 19:30</td>
+            <td>Dorośli kategoria wiekowa 18+</td>
+            <td>Grupa zaawansowana</td>
+            <td>1,5h</td>
+
+        </tr>
+        
+        <tr>
+            <td>Środa</td>
+            <td class="hour">16:00 - 17:30</td>
+            <td>Młodzież kategoria wiekowa 13-17</td>
+            <td>Grupa średnio zaawansowana </td>
+            <td>1,5h</td>
+        </tr>
+        <tr>
+            <td>Piątek</td>
+            <td class="hour">17:00 - 18:30</td>
+            <td>Dzieci kategoria wiekowa 7-12</td>
+            <td>Grupa początkująca</td>
+            <td>1,5h</td>
+        </tr>
+        <tr>
+            <td>Sobota</td>
+            <td class="hour">19:00 - 20:00</td>
+            <td>Panie w każdym wieku</td>
+            <td>Grupa mieszana </td>
+            <td>1h</td>
+        </tr>
     
-    
+    </table>
+    <!--CENNIK-->
+    <section id="cennik">
+    <div class="first">
+        <div class="pricing-card">
+            <h3>Pierwszy trening darmowy</h3>
+            <p>Przyjdź poznaj Miejsce, Trenera i naszą Kadrę.</p>
+            <div class="price">0 zł</div>
+            <div class="opis"><span style="color: orangered" >Pierwszy Trening </span></div>
+        </div>
+        </div>
+        
+    <div class="miesiac">   
+        <h3>Karnet Miesięczny</h3>
+        <p>Dwa treningi w tygodniu w wybranej grupie.</p>
+        <div class="price">200 zł</div>
+        <div class="opis"><span style="color:#a19797">Miesięczny Karnet</span></div>
+    </div>
+    <div class="pesonal">
+        <h3>Treningi Personalne </h3>
+        <p>Treningi dwa razy w tygodniu z naszymi najlepszymi trenerami. Odbywają się w godzinach wieczornych po 19.</p>
+        <div class="price">150 zł --> od Treningu</div>
+        <div class="opis"><span style="color:green">Trening Personalny</span></div>
+    </div>
     </section>
+    
+</section>
+
+<!-- KONTAKT -->
+ <div>
+     
+     
+     
+     
+     
+     <section class="kontakt" id="kontakt">
+         <section class="info">
+             <div class="Dane">
+                 <h2>KONTAKT</h2>
+                 <div class="pasek"></div>
+              
+              <h3>Sekcja Praga</h3>
+          
+              <p>
+                  Fight Club Warszawa<br>
+                  UL.Nowogrodzka50/lok 415<br>
+                  Warszawa<br>
+                  
+              </p>
+              <p>W dniach: Poniedziałek, Środa, Piątek, Sobota</p>
+              <p>Godziny Otwarcia Biura 16-21</p>
+          
+              <p>
+                  <strong>Tel:</strong> <span class="rozowy-tekst">500 782 367</span><br>
+                  <strong>Mail:</strong><a href="mail:FCWarszawa@gmail.com">Warszawa Klub</a> 
+              </p>
+          </div>
+        
+          </section>
+     
+    <h2>Napisz do nas</h2>
+    <form>
+        <input type="text" placeholder="Twoje imię" required>
+        <input type="email" placeholder="Twój e-mail" required>
+        <textarea placeholder="Twoja wiadomość..." required></textarea>
+        <button type="submit">Wyślij wiadomość</button>
+    </form>
+     </section>
+</div>
+
+</div>
+
+<!-- STOPKA -->
+<footer>
+    <p>&copy; 2026 Kick Boxing. Wszelkie prawa zastrzeżone.</p>
+</footer>
+
 </body>
 </html>
